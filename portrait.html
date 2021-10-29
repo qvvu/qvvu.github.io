@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navigation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<div class="container-fluid">
+    <a class="navbar-brand" href="index.html">QVVU.NET</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav row-col-sm-3">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="portfolio.html" role="button" data-bs-toggle="dropdown">portfolio</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="glitch.html">GLITCH</a></li>
+            <li><a class="dropdown-item" href="minecraft.html">MINECRAFT</a></li>
+            <li><a class="dropdown-item" href="meme.html">M3M3 MASHUP</a></li>
+            <li><a class="dropdown-item" href="netart.html">NET.ART</a></li>
+			<li><a class="dropdown-item" href="3-D.html">3-D ART</a></li>
+			<li><a class="dropdown-item" href="portfolio.html">P5.JS ART</a></li>
+          </ul>
+        </li>
+	<li class="nav-item">
+	<a class="nav-link" href="about.html">about</a>
+	</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</body>
+<h1 class="mt-5 text-primary" style="text-align: center">P5.JS ART</h1>
+<pre class="mt-1" style="text-align: center">
+This is a self portrait I coded with p5.js. 
+I also included a copy-pastable code that you can try for yourself!
+</pre>
+	<div class="mt-4 container-fluid row">
+	<div class="col-sm-6" style="text-align: center"><img class="img-fluid" src="img/selfportrait_p5js.png" alt="p5.js portrait" ></div>
+	<div class="col-sm-6 overflow-auto" style="text-align: left">
+<pre class="overflow-auto">
+	function setup() {
+  createCanvas(720,720);
+  strokeWeight(4);
+  ellipseMode(RADIUS);
+}
+function draw() {
+  background(218,241,238);
+    // Head
+  noStroke();
+  fill(246,197,190);
+  ellipse(380, 300, 175,175); 
+  beginShape();
+  vertex(225,270); //nose bridge
+  vertex(145,355); //nose point
+  vertex(190,390); //end nose
+  vertex(180,408); //top lip
+  vertex(195,427); //lip line
+  vertex(190,450); //bottom lip
+  vertex(205,460); //bottom lip line
+  vertex(210,500); //chin
+  vertex(225,508); //chin II
+  vertex(300,505); //neck start
+  vertex(300,585); //neck end
+  vertex(155,720);
+  vertex(530,720);
+  vertex(515,675);
+  vertex(450,585);
+  vertex(450,405);
+  endShape(CLOSE);
+  //hair
+  noStroke();
+  fill(128,182,208,165);
+  beginShape();
+  vertex(210,155); //hair forehead start
+  vertex(250,260); //strand begin
+  vertex(300,320); //strand 
+  vertex(290,390); //strand end
+  vertex(340,330);
+  vertex(360,290); //strand connect
+  vertex(420,400); //hair cascade start
+  vertex(415,550);
+  vertex(530,620);
+  vertex(545,575);
+  vertex(580,600); //hair end
+  vertex(570,530);
+  vertex(570,300);
+  vertex(560,150);
+  vertex(360,110);
+  endShape(CLOSE);
+  //transparencies (nose, ears, shirt)
+  noStroke();
+  fill(240,118,161,90);
+  triangle(220,270,130,360,200,385);
+  arc(380,340,65,65,radians(290),HALF_PI);
+  quad(260,600,140,720,540,720,480,580);
+  //glasses
+  stroke(159,144,242,150);
+  line(235,295,450,320);
+  fill(159,144,242,150);
+  noStroke();
+  ellipse(200,300,5,50);
+}
+	</pre></div>
+	</div>
+
+</html>
